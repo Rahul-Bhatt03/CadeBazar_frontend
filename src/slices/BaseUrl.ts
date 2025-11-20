@@ -1,7 +1,7 @@
 import { Platform } from "react-native";
 
-const LOCAL_IP = "192.168.1.7"; // your computer's IP
-const PORT = 5187; // your HTTP port from launchSettings.json
+const LOCAL_IP = "192.168.1.7"; 
+const PORT = 5187; 
 
 const getBaseUrl = () => {
   if (__DEV__) {
@@ -11,7 +11,7 @@ const getBaseUrl = () => {
       return `http://localhost:${PORT}/api`;
     }
   } else {
-    return "http://192.168.1.2:5187/api";
+    return "http://192.168.1.7:5187/api";
   }
 };
 

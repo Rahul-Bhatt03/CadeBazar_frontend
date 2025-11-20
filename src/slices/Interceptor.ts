@@ -21,7 +21,7 @@ const setLoading = (isLoading: boolean) => {
 // const token=AsyncStorage.getItem('userDate.token');
 
 export const api=axios.create({
-    baseURL:`${BASE_URL}`||"http://192.168.1.2:5187/api",
+    baseURL:`${BASE_URL}`||"http://192.168.1.7:5187/api",
     headers:{
         "Content-Type":"application/json"
     }
@@ -49,7 +49,7 @@ try {
     return config;
 },
 (error)=>{
-     console.log("❌ Request error - hiding spinner");
+     console.log(" Request error - hiding spinner");
    setLoading(false);
     return Promise.reject(error);
 }

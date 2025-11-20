@@ -4,6 +4,7 @@ import {Provider, useSelector} from "react-redux";
 import {store} from "../src/store/store"
 import PizzaSpinner from "@/src/components/Spinner";
 import { View } from "react-native";
+import "../global.css"
 
 // wrapper to access redux state 
 function GlobalLoaderWrapper(){
@@ -25,24 +26,14 @@ export default function RootLayout() {
             name="(screens)/login"
             options={{ headerShown: false }}
           />
+
           <Stack.Screen
-            name="(screens)/superAdminDashboard"
+            name="(screens)/CustomerPage/customerDashboard"
             options={{ headerShown: false }}
           />
+
           <Stack.Screen
-            name="(screens)/groupAdminDashboard"
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="(screens)/customerDashboard"
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="(screens)/deliveryDashboard"
-            options={{ headerShown: false }}
-          />
-          <Stack.Screen
-            name="(screens)/adminDashboard"
+            name="(screens)/adminDashboard/Dashboard"
             options={{ headerShown: false }}
           />
 

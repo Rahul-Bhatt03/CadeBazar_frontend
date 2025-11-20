@@ -31,7 +31,7 @@ switch (role) {
   case "admin":
   case "superadmin":
   case "groupadmin":
-    router.replace("/adminDashboard");
+    router.replace("/adminDashboard/Dashboard");
     break;
 
   case "customer":
