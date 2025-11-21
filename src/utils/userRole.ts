@@ -1,4 +1,27 @@
-export const SidebarOptions = {
+type SidebarIcon =
+  | "home-outline"
+  | "receipt-outline"
+  | "grid-outline"
+  | "list-outline"
+  | "fast-food-outline"
+  | "cube-outline"
+  | "people-outline"
+  | "pricetag-outline"
+  | "cash-outline"
+  | "card-outline"
+  | "bar-chart-outline"
+  | "settings-outline"
+  | "person-outline"
+  | "shield-outline";
+
+
+interface SidebarItem {
+  label: string;
+  icon: SidebarIcon;
+  route: string;
+}
+
+export const SidebarOptions: Record<string, SidebarItem> = {
   Dashboard: { label: "Dashboard", icon: "home-outline", route: "Dashboard" },
   Orders: { label: "Orders", icon: "receipt-outline", route: "Orders" },
   Categories: { label: "Categories", icon: "grid-outline", route: "Categories" },

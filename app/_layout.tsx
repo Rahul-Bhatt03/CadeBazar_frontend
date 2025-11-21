@@ -5,6 +5,7 @@ import {store} from "../src/store/store"
 import PizzaSpinner from "@/src/components/Spinner";
 import { View } from "react-native";
 import "../global.css"
+import { AuthProvider } from "@/src/utils/AuthContext";
 
 // wrapper to access redux state 
 function GlobalLoaderWrapper(){
@@ -20,6 +21,7 @@ export const unstable_settings = {
 export default function RootLayout() {
   return (
     <Provider store={store}>
+       <AuthProvider> 
       <View style={{ flex: 1 }}>
         <Stack>
           <Stack.Screen
@@ -47,6 +49,7 @@ export default function RootLayout() {
 
         <GlobalLoaderWrapper />
       </View>
+       </AuthProvider> 
     </Provider>
   );
 }
