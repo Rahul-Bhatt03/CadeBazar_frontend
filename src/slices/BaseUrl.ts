@@ -1,6 +1,6 @@
 import { Platform } from "react-native";
 
-const LOCAL_IP = "192.168.1.7"; 
+const LOCAL_IP = "192.168.1.8"; 
 const PORT = 5187; 
 
 const getBaseUrl = () => {

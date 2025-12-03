@@ -5,7 +5,9 @@ module.exports = {
     "./app/(screens)/**/*.{ts,tsx}",
     "./app/(tabs)/**/*.{ts,tsx}",
     "./app/(drawers)/**/*.{ts,tsx}",
-    "./src/components/**/*.{ts,tsx}"
+    "./app/(admin)/**/*.{ts,tsx}",
+    "./src/components/**/*.{ts,tsx}",
+     "./src/**/*.{ts,tsx}",
   ],
   presets: [require("nativewind/preset")],
   theme: { extend: {} },

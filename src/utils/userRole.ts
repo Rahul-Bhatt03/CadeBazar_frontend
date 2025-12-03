@@ -28,7 +28,7 @@ export const SidebarOptions: Record<string, SidebarItem> = {
   SubCategories: { label: "Subcategories", icon: "list-outline", route: "SubCategories" },
   FoodItems: { label: "Food Items", icon: "fast-food-outline", route: "FoodItems" },
   Inventory: { label: "Inventory", icon: "cube-outline", route: "Inventory" },
-  Staffs: { label: "Staff", icon: "people-outline", route: "Staffs" },
+  Staffs: { label: "Staff", icon: "people-outline", route: "Staffs" }, 
   Discounts: { label: "Discounts", icon: "pricetag-outline", route: "Discounts" },
   Taxes: { label: "Taxes", icon: "cash-outline", route: "Taxes" },
   Payments: { label: "Payments", icon: "card-outline", route: "Payments" },
