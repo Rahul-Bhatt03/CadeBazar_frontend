@@ -7,7 +7,8 @@ import { mainApi } from "../slices/mainApi";
 export const store=configureStore({
     reducer:{
         auth:userReducer,
-        spinner:LoadingReducer
+        spinner:LoadingReducer,
+        [mainApi.reducerPath]:mainApi.reducer,
     },
     middleware:(getDefaultMiddleware)=>getDefaultMiddleware().concat(mainApi.middleware),
 })

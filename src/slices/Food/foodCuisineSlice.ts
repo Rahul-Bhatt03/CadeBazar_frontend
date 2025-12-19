@@ -1,16 +1,17 @@
+import { FoodCuisine } from "@/src/utils/Types/Category/FoodCuisine.types";
 import { mainApi } from "../mainApi";
 
 export const cuisineApi = mainApi.injectEndpoints({
     endpoints: (builder) => ({
 
-        getCuisines: builder.query({
+        getCuisines: builder.query<FoodCuisine[],void>({
             query: () => ({
                 url: "FoodCuisine/Cuisine",
                 method: "GET",
             }),
             providesTags: (result) => result ? [
                 ...result.map((item) => ({
-                    type: "Cuisine", id: item.cuisineId
+                    type: "Cuisine", id: item.foodCuisineId
                 })),
                 { type: "Cuisine", id: "LIST" }
             ] : [{
@@ -46,7 +47,7 @@ export const cuisineApi = mainApi.injectEndpoints({
                 data: body
             }),
             async onQueryStarted({ id, body }, { dispatch, queryFulfilled }) {
-                const patch = dispatch(cuisineApi.util.updateQueryData("cuisineApi", id, (draft) => {
+                const patch = dispatch(cuisineApi.util.updateQueryData("getCuisine", id, (draft) => {
                     Object.assign(draft, body);
                 }));
                 try {

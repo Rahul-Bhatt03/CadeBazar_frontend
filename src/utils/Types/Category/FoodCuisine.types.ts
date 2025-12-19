@@ -1,8 +1,9 @@
 import { FoodItem } from "./FoodItem.types";
 
 export interface FoodCuisine{
-    foodCuisine:number,
+    foodCuisineId:number,
     name:string,
     foodItems:FoodItem[],
-    isActive:boolean
+    isActive:boolean,
+   
 }
